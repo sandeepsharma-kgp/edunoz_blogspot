@@ -6,6 +6,7 @@
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' type='text/javascript'/>   
  <link href='http://fonts.googleapis.com/css?family=Dosis:400,700|Open+Sans:400,700,400italic|Exo+2:700' media='all' rel='stylesheet' type='text/css'/>
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <b:include data='blog' name='all-head-content'/>
     <title>
 		<b:if cond='data:blog.pageType == &quot;index&quot;'>
@@ -754,7 +755,7 @@ margin-bottom: 35px;
 .works-title h4 {
 font-size: 50px;
     line-height: 66px;
-color:#fff;
+color:#001a33;
 }
 .works-title span {
 font-size: 25px;
@@ -766,6 +767,34 @@ color:#ddd;
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
+}
+.works-title1 {
+    text-align: center;
+margin-bottom: 35px;
+}
+.works-title1 h7 {
+font-size: 15px;
+    line-height: 17px;
+color: #0f0f0a;
+text-align: justify;
+}
+.works-title1 h8 {
+font-size: 15px;
+    line-height: 17px;
+color: #0f0f0a;
+text-align: justify;
+}
+.works-title1 span {
+font-size: 25px;
+color:#ddd;
+}
+.works-tiles1 {
+    width: 25%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #6666ff;
 }
 .works-icons {
     font-size: 80px;
@@ -2600,12 +2629,24 @@ img_thumb_width = 200; /*Image Width*/
   </div>
 <div style='clear: both;'/>
 <!-- First -->
-<div class='works-title'>
+<div class='works-title1'>
 <span class='special-icons'>
- <i aria-hidden='true' class='fa fa-heart-o'/>
+ <!-- <i aria-hidden='true' class='fa fa-heart-o'/> -->
 </span>
-<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s.
-Founded by the alumni of the esteemed IIT kharagpur and with the strong principles of “सिद्धिर्भवति कर्मजा “(Success is born of action) and “विद्या विनियोगात् विकासः”  (Progress comes from proper+application of knowledge) as its pillars, Edunoz stands synonymous to excellence and strives to impart the best technical education and training to its students.  </span>
+<span>
+<h7>
+An initiative from the alumni of iit Kharagpur, we specialize in providing the best IT training and hands-on learning to students and IT individuals, helping them hone their skills to grasp new opportunities and scale newer heights in their careers. We take special care to keep our course curriculum updated in accordance with the industry requirements and newer trends in the market, to provide our students with an upper hand in the competition.
+</h7> 
+<h8>
+
+</h8></span>
+<span>
+<h8>
+
+      In our endeavor to deliver the best trainings and create a constructive learning environment for the students, we have the support of highly experienced industry professionals with a passion of imparting knowledge and empowering others with a skill set to build their future. Apart from the regular classroom teaching sessions, the students will also have the opportunity to attend interactive seminars and doubt clearing sessions from industry experts. We also provide the flexibility to stay in touch with us for any future assistance that the student may require.
+
+</h8>
+</span>
 </div>
 <!-- First One Ends -->
 
@@ -2620,37 +2661,48 @@ Founded by the alumni of the esteemed IIT kharagpur and with the strong principl
 <!-- First -->
 <div class='works-tiles'>
 <span class='works-icons'>
-<li data-percent='33'><span class='text'><i aria-hidden='true' class='fa fa-IIT'/></span><span class='bar-circle-right' style='transform: rotate(90deg);'/><span class='bar-circle-left'/><span class='bar-circle-cover'/></li> 
+<li data-percent='33'><span class='text'>
+<!-- <i aria-hidden='true' class='fa fa-IIT'/> -->
+<img src="https://img.icons8.com/nolan/500/000000/oracle-logo.png" />
+</span><span class='bar-circle-right' style='transform: rotate(90deg);'/><span class='bar-circle-left'/><span class='bar-circle-cover'/></li> 
 </span>
-  <h6 class='works-heading'><a href='https://edunoz.com/' title='IIT'> IIT</a></h6>
-<p class='works-text'>IIT foundanation and more </p>
+  <h6 class='works-heading'><a href='https://edunoz.com/' title='IIT'> ORACLE</a></h6>
+<p class='works-text'>SQL,PL/SQL,DBA and may other </p>
 </div>
 <!-- First One Ends -->
 
 <!-- Second -->
 <div class='works-tiles'>
 <span class='works-icons'>
-<li data-percent='67'><span class='text'><i aria-hidden='true' class='fa fa-clipboard'/></span><span class='bar-circle-right' style='transform: rotate(180deg);'/><span class='bar-circle-left' style='clip: rect(0px 150px 150px 75px); background: rgb(176, 218, 185);'/><span class='bar-circle-cover'/></li>
+<li data-percent='67'><span class='text'>
+<!-- <i aria-hidden='true' class='fa fa-clipboard'/> -->
+<img src="https://img.icons8.com/color/200/000000/java-coffee-cup-logo.png"/></span><span class='bar-circle-right' style='transform: rotate(180deg);'/><span class='bar-circle-left' style='clip: rect(0px 150px 150px 75px); background: rgb(176, 218, 185);'/><span class='bar-circle-cover'/></li>
  
 </span>
-  <h6 class='works-heading'> NEET</h6>
-<p class='works-text'>NEET Foundation and More </p>
+  <h6 class='works-heading'> JAVA</h6>
+<p class='works-text'>Java,Hibernate,Spring and many</p>
 </div>
 <!-- Second Ends -->
 
 <!-- Third -->
 <div class='works-tiles'>
 <span class='works-icons'>
-<li data-percent='100'><span class='text'><i aria-hidden='true' class='fa fa-heart'/></span><span class='bar-circle-right' style='transform: rotate(270deg);'/><span class='bar-circle-left' style='clip: rect(0px 150px 150px 75px); background: rgb(176, 218, 185);'/><span class='bar-circle-cover'/></li>
+<li data-percent='100'><span class='text'>
+<!-- <i aria-hidden='true' class='fa fa-heart'/> -->
+<img src="https://img.icons8.com/color/200/000000/sap.png"/>
+</span><span class='bar-circle-right' style='transform: rotate(270deg);'/><span class='bar-circle-left' style='clip: rect(0px 150px 150px 75px); background: rgb(176, 218, 185);'/><span class='bar-circle-cover'/></li>
  
 </span>
-  <h6 class='works-heading'>TECHNICAL</h6>
-<p class='works-text'>Growing Industries technologies and more</p>
+  <h6 class='works-heading'>SAP</h6>
+<p class='works-text'>SAP ABAP ,Functional and others</p>
 </div>
 <!-- Third Ends -->
 <div class='works-tiles'>
 <span class='works-icons'>
-<li data-percent='100'><span class='text'><i aria-hidden='true' class='fa fa-heart'/></span><span class='bar-circle-right' style='transform: rotate(270deg);'/><span class='bar-circle-left' style='clip: rect(0px 150px 150px 75px); background: rgb(176, 218, 185);'/><span class='bar-circle-cover'/></li>
+<li data-percent='100'><span class='text'>
+<!-- <i aria-hidden='true' class='fa fa-heart'/> -->
+<img src="https://img.icons8.com/color/200/000000/many-to-many.png"/>
+</span><span class='bar-circle-right' style='transform: rotate(270deg);'/><span class='bar-circle-left' style='clip: rect(0px 150px 150px 75px); background: rgb(176, 218, 185);'/><span class='bar-circle-cover'/></li>
  
 </span>
   <h6 class='works-heading'>Many More Technologies</h6>
@@ -4341,8 +4393,8 @@ width: 100%;
               <li><i class='fa fa-map-marker'/>
                 <p>Wakad,Pune,MH,India 411057</p>
               </li>
-              <li><i class='fa fa-envelope-o'/>
-                <p><a class='nocolor' href='mailto:first.last@email.com'>edunoz@yahoo.com</a></p>
+              <li><i class='fa fa-envelope'/>
+                <p><a class='nocolor' href='mailto:edunoz@yahoo.com'>edunoz@yahoo.com</a></p>
               </li>
               <li><i class='fa fa-phone'/>
                 <p>00 (123) 456 78 90</p>
@@ -4457,6 +4509,7 @@ width: 100%;
 <div style='clear:both'/>
                     <div class='jugas_footer_copyright'>
                        Created By <a href='https://twitter.com/jelopatel' id='jaycontent' rel='dofollow'>Jay</a> | Copyright &#169; 2019 Edunoz - All Rights Reserved.
+                      <img src="https://img.icons8.com/color/27/000000/india.png"/>
                     </div>
                
               
