@@ -1,0 +1,51 @@
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<div dir="ltr" style="text-align: left;" trbidi="on">
+Courses We Offer:<br />
+<br />
+<br />
+<ul style="text-align: left;">
+<li>SAP (ABAP, ABAP on HANA)</li>
+<li>JAVA (Basic and Advance,Hibernate,Spring)</li>
+<li>Oracle ( <a href="https://www.edunoz.com/p/p.html">pl-sql</a> , Database <a href="https://www.edunoz.com/p/dba.html">DBA</a>, RAC)</li>
+<li>Android ( App development , Android Studio)</li>
+<li>Data Science</li>
+<li>Python</li>
+<li>.Net&nbsp;</li>
+</ul>
+<div>
+<h4 style="text-align: left;">
+Please drop your query, we will contact you soon.</h4>
+<br /></div>
+</div>
+<script>
+var blogId = '6809025203165946844';//this number should be mandatorily edited.
+//The below message 5 Strings can also be edited
+var contactFormMessageSendingMsg ='Sending...';
+var contactFormMessageSentMsg = 'Your message has been sent.';
+var contactFormMessageNotSentMsg = 'Message could not be sent. Please try again later.';
+var contactFormEmptyMessageMsg ='Message field cannot be empty.';
+var contactFormInvalidEmailMsg = 'A valid email is required.'
+
+var widgetLoaded=false;
+function sendEmailMsg() {
+if(widgetLoaded== false) {
+_WidgetManager._RegisterWidget('_ContactFormView', new _WidgetInfo('ContactForm1', 'sidebar', null, document.getElementById('ContactForm1'), {'contactFormMessageSendingMsg': contactFormMessageSendingMsg , 'contactFormMessageSentMsg': contactFormMessageSentMsg , 'contactFormMessageNotSentMsg': contactFormMessageNotSentMsg , 'contactFormInvalidEmailMsg': contactFormInvalidEmailMsg , 'contactFormEmptyMessageMsg': contactFormEmptyMessageMsg , 'title': 'Contact Form', 'blogId': blogId, 'contactFormNameMsg': 'Name', 'contactFormEmailMsg': 'Email', 'contactFormMessageMsg': 'Message', 'contactFormSendMsg': 'Send', 'submitUrl': 'https://www.blogger.com/contact-form.do'}, 'displayModeFull'));
+widgetLoaded=true;
+document.getElementById('ContactForm1_contact-form-submit').click();
+}
+return true;
+}
+</script>
+
+<br />
+<form name="contact-form">
+<div>
+<br /></div>
+<div style="max-width: 450px; text-align: center; width: 100%;">
+<div class="contact-form-error-message" id="ContactForm1_contact-form-error-message">
+</div>
+<div class="contact-form-success-message" id="ContactForm1_contact-form-success-message">
+</div>
+</div>
+</form>
+</div>

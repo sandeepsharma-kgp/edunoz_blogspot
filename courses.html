@@ -1,0 +1,141 @@
+
+<div dir="ltr" style="text-align: left;" trbidi="on">
+    <div dir="ltr" style="text-align: left;" trbidi="on">
+        Courses We Offer:<br />
+        <br />
+        <br />
+        <ul style="text-align: left;">
+            <li>SAP (ABAP, ABAP on HANA)</li>
+            <li>JAVA (Basic and Advance,Hibernate,Spring)</li>
+            <li>Oracle ( <a href="https://www.edunoz.com/p/p.html">pl-sql</a> , Database <a
+                    href="https://www.edunoz.com/p/dba.html">DBA</a>, RAC)</li>
+            <li>Android ( App development , Android Studio)</li>
+            <li>Data Science</li>
+            <li>Python</li>
+            <li>.Net&nbsp;</li>
+        </ul>
+        <div>
+            <h4 style="text-align: left;">
+                Please drop your query, we will contact you soon.</h4>
+            <br />
+        </div>
+        <form id="test-form">
+  
+            <div>
+              <label>Name</label>
+              <input type="text" name="Name" placeholder="Name"/>
+            </div>
+          
+            <div>
+              <label>Email</label>
+              <input type="text" name="Email" placeholder="Email"/>
+            </div>
+            
+            <div>
+              <label>Phone</label>
+              <input type="text" name="Phone" placeholder="Phone"/>
+            </div>
+            
+            <div>
+              <label>Address</label>
+              <input type="text" name="Address" placeholder="Address"/>
+            </div>
+
+            <div>
+                <label>Query</label>
+                <input type="text" name="Query" placeholder="Query"/>
+            </div>
+          
+            <div>
+              <button type="submit"id="submit-form">Submit</button>
+            </div>
+          
+          </form>
+          <div class="container">
+            <div class="message signup">
+              <div class="btn-wrapper">
+                <button class="button" id="signup">SignUp</button>
+                <button class="button" id="login"> Login</button>
+              </div>
+            </div>
+            <div class="form form--signup">
+              <div class="form--heading">Welcome! Sign Up</div>
+              <form autocomplete="off">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button class="button">Sign Up</button>
+              </form>
+            </div>
+            <div class="form form--login">
+              <div class="form--heading">Welcome back! </div>
+              <form autocomplete="off">
+                <input type="text" placeholder="Name">
+                <input type="password" placeholder="Password">
+                <button class="button">Login</button>
+              </form>
+            </div>
+          </div>
+    </div>
+    <script>
+        var blogId = '6809025203165946844';//this number should be mandatorily edited.
+        //The below message 5 Strings can also be edited
+        var contactFormMessageSendingMsg = 'Sending...';
+        var contactFormMessageSentMsg = 'Your message has been sent.';
+        var contactFormMessageNotSentMsg = 'Message could not be sent. Please try again later.';
+        var contactFormEmptyMessageMsg = 'Message field cannot be empty.';
+        var contactFormInvalidEmailMsg = 'A valid email is required.'
+
+        var widgetLoaded = false;
+        function sendEmailMsg() {
+            if (widgetLoaded == false) {
+                _WidgetManager._RegisterWidget('_ContactFormView', new _WidgetInfo('ContactForm1', 'sidebar', null, document.getElementById('ContactForm1'), { 'contactFormMessageSendingMsg': contactFormMessageSendingMsg, 'contactFormMessageSentMsg': contactFormMessageSentMsg, 'contactFormMessageNotSentMsg': contactFormMessageNotSentMsg, 'contactFormInvalidEmailMsg': contactFormInvalidEmailMsg, 'contactFormEmptyMessageMsg': contactFormEmptyMessageMsg, 'title': 'Contact Form', 'blogId': blogId, 'contactFormNameMsg': 'Name', 'contactFormEmailMsg': 'Email', 'contactFormMessageMsg': 'Message', 'contactFormSendMsg': 'Send', 'submitUrl': 'https://www.blogger.com/contact-form.do' }, 'displayModeFull'));
+                widgetLoaded = true;
+                document.getElementById('ContactForm1_contact-form-submit').click();
+            }
+            return true;
+        }
+
+        $.fn.serializeObject = function () {
+                var o = {};
+                var a = this.serializeArray();
+                $.each(a, function () {
+                    if (o[this.name]) {
+                        if (!o[this.name].push) {
+                            o[this.name] = [o[this.name]];
+                        }
+                        o[this.name].push(this.value || '');
+                    } else {
+                        o[this.name] = this.value || '';
+                    }
+                });
+                return o;
+            };
+
+        var $form = $('form#test-form'),
+                url = 'https://script.google.com/macros/s/AKfycbw5NAREeXPQUI_fPoz1Omj0L9LsRrJ9boME-ERX9FhDWGqn66I/exec'
+
+            $('#submit-form').on('click', function (e) {
+                e.preventDefault();
+                var jqxhr = $.ajax({
+                    url: url,
+                    method: "GET",
+                    dataType: "json",
+                    data: $form.serializeObject()
+                }).success(
+                ).console.log(jqxhr);
+            })
+    </script>
+
+    <br />
+    <form name="contact-form">
+        <div>
+            <br /></div>
+        <div style="max-width: 450px; text-align: center; width: 100%;">
+            <div class="contact-form-error-message" id="ContactForm1_contact-form-error-message">
+            </div>
+            <div class="contact-form-success-message" id="ContactForm1_contact-form-success-message">
+            </div>
+        </div>
+    </form>
+</div>

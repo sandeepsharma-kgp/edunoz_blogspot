@@ -1,0 +1,204 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+    }
+
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
+
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12pt;
+        margin-left: 50%
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+
+    .col-25 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+    }
+
+    .col-75 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+    }
+
+    /* Clear floats after the columns */
+    .row1::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+
+        .col-25,
+        .col-75,
+        input[type=submit] {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 0;
+        }
+    }
+</style>
+<script>
+    function validateForm() {
+        var num = document.forms["myForm"]["phone"].value;
+        if (isNaN(num)) {
+            alert("Enter only Numeric value  in phone no.");
+            return false;
+        }
+        if (num.length != 10) {
+            alert("Enter valid 10 digit phone no.");
+            return false;
+        }
+        var eid = document.forms["myForm"]["email"].value;
+        var atposition = eid.indexOf("@");
+        var dotposition = eid.lastIndexOf(".");
+        if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= eid.length) {
+            alert("Please enter a valid e-mail address1");
+            return false;
+        }
+        var x = document.forms["myForm"]["subject"].value;
+        if (x.length < 10) {
+            alert("Please enter detailed subject of query");
+            return false;
+        }
+    }
+</script>
+<div class="container">
+    <form id="myForm" name="myForm" onsubmit="return validateForm()">
+        <div class="row1">
+            <div class="col-25">
+                <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+            </div>
+        </div>
+        <div class="row1">
+            <div class="col-25">
+                <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            </div>
+        </div>
+        <div class="row1">
+            <div class="col-25">
+                <label for="phone">Phone No.</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="phone" name="phone" placeholder="Your 10 digit Mobile No. .." required>
+            </div>
+        </div>
+        <div class="row1">
+            <div class="col-25">
+                <label for="email">Email Id</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="email" name="email" placeholder="Your email id.." required>
+            </div>
+        </div>
+        <div class="row1">
+            <div class="col-25">
+                <label for="address">Reside In</label>
+            </div>
+            <div class="col-75">
+                <select id="address" name="address">
+                    <option value="Wakad">Wakad</option>
+                    <option value="Pimpri Chinchwad">Pimpri Chinchwad</option>
+                    <option value="Aundh">Aundh</option>
+                    <option value="Hinjewadi">Hinjewadi</option>
+                    <option value="Pimple Saudagar">Pimple Saudagar</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="row1">
+            <div class="col-25">
+                <label for="query">Query For</label>
+            </div>
+            <div class="col-75">
+                <select id="query" name="query">
+                    <option value="Java">Java</option>
+                    <option value="SAP">SAP</option>
+                    <option value="Oracle">Oracle</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="AWS">AWS</option>
+                </select>
+            </div>
+        </div>
+        <div class="row1">
+            <div class="col-25">
+                <label for="subject">Subject</label>
+            </div>
+            <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"
+                    required></textarea>
+            </div>
+        </div>
+        <div class="row1">
+            <input type="submit" id="submit-form" value="Submit">
+        </div>
+    </form>
+    <script>
+    $.fn.serializeObject = function () {
+        var o = {};
+        var a = this.serializeArray();
+        $.each(a, function () {
+            if (o[this.name]) {
+                if (!o[this.name].push) {
+                    o[this.name] = [o[this.name]];
+                }
+                o[this.name].push(this.value || '');
+            } else {
+                o[this.name] = this.value || '';
+            }
+        });
+        return o;
+    };
+
+    var $form = $('form#myForm'),
+        url = 'https://script.google.com/macros/s/AKfycbw5NAREeXPQUI_fPoz1Omj0L9LsRrJ9boME-ERX9FhDWGqn66I/exec'
+
+    $('#submit-form').on('click', function (e) {
+        var jqxhr = $.ajax({
+            url: url,
+            method: "GET",
+            dataType: "json",
+            data: $form.serializeObject()
+        }).success(
+        );
+    })   
+    </script>
+</div>
